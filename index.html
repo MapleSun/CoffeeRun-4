@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>coffeerun</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        form :focus:required:invalid {
+            border-color: #a94442;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <header>
+        <h1>CoffeeRun</h1>
+    </header>
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-coffee-order="form">
+                    <div class="form-group">
+                        <label for="coffeeOrder">Coffee Order</label>
+                        <input type="text" class="form-control" name="coffee" id="coffeeOrder" autofocus required="[a-zA-z\s]+"/>
+                    </div>
+                    <div class="from-group">
+                        <lable for="emailInput">Email</lable>
+                        <input type="email" class="form-control" name="emailAddress" id="emailInput" value="" placeholder="dr@who.com" required />
+                    </div>
+                    <div class="radio">
+                        <label>
+                                <input type="radio" name="size" value="short">
+                                Short
+                            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                                <input type="radio" name="size" value="tall" checked>
+                                Tall
+                            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                                <input type="radio" name="size" value="grande">
+                                Grande
+                            </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                                <input type="radio" name="size" value="Coffee-zilla">
+                                Coffee-zilla
+                            </label>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="flavorShot">Flavor Short</label>
+                        <select id="flavorShort" class="form-control" name="flavor">
+                            <option value="">None</option>
+                            <option value="caramel">Caramel</option>
+                            <option value="almond">Almond</option>
+                            <option value="mocha">Mocha</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="strengthLevel">Caffeine Rating</label>
+                        <span id="strengthNum">30</span>
+                        <input name="strength" type="range" id="strength" value="30">
+                    </div>
+
+                    <!--golden challenge, option  time travel, mind reading, or bug-free code.-->
+                    <div class="achievementOpt">
+                        <div class="radio">
+                            <label>
+                                    <input type="radio" name="achievement" value="time travel" checked>
+                                    Time travel
+                                </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                    <input type="radio" name="achievement" value="tall" >
+                                    Mind reading
+                                </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                    <input type="radio" name="achievement" value="grande">
+                                    Grande
+                                </label>
+                        </div>
+                    </div>
+                    <!--golden end-->
+
+                    <!--data-toggle="modal" data-target=".bs-example-modal-lg" this open modal in struct way -->
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+
+                    <!-- modal
+                    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="submit" id="achieveModal">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title">Achievement</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>The strongest and largest coffee Achievement. We will give you an extra power-up option next time.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    modal end-->
+
+                </form>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Pending Order:</h4>
+                <div data-coffee-order="checklist"></div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="scripts/validation.js" charset="utf-8"></script>
+    <script src="scripts/checklist.js" charset="utf-8"></script>
+    <script src="scripts/fromhandler.js" charset="utf-8"></script>
+    <script src="scripts/remotedatastore.js" charset="utf-8"></script>
+    <!--script src="scripts/sliderHandler.js" charset="utf-8"></script-->
+    <script src="scripts/datastore.js" charset="utf-8"></script>
+    <script src="scripts/truck.js" charset="utf-8"></script>
+    <script src="scripts/main.js" charset="utf-8"></script>
+</body>
+
+</html>
